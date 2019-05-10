@@ -43,7 +43,7 @@ def parse_args():
                       default='pascal_voc', type=str)
   parser.add_argument('--net', dest='net',
                     help='vgg16, res101',
-                    default='vgg16', type=str)
+                    default='res101', type=str)
   parser.add_argument('--start_epoch', dest='start_epoch',
                       help='starting epoch',
                       default=1, type=int)
@@ -62,10 +62,11 @@ def parse_args():
                       type=str)
   parser.add_argument('--nw', dest='num_workers',
                       help='number of worker to load data',
-                      default=0, type=int)
+                      default=4, type=int)
   parser.add_argument('--cuda', dest='cuda',
                       help='whether use CUDA',
-                      action='store_true')
+                      action='store_true',
+                      default=True)
   parser.add_argument('--ls', dest='large_scale',
                       help='whether use large imag scale',
                       action='store_true')                      
